@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db:
+    container_name: booksdb
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+
+# docker run --name booksdb -e MYSQL_ROOT_PASSWORD=password -e MYSQL_USER=gabriel -e MYSQL_PASSWORD=password -e MYSQL_DATABASE=booksdb -p 3306:3306 -d mysql
